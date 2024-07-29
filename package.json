@@ -11,7 +11,7 @@
   "exports": {
     ".": {
       "import": "./dist/react-ui.js",
-      "require": "./dist/house-ui.umd.cjs"
+      "require": "./dist/react-ui.umd.cjs"
     }
   },
   "scripts": {
@@ -24,9 +24,11 @@
   "dependencies": {
     "path": "^0.12.7",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "vite-tsconfig-paths": "^4.3.2"
   },
   "devDependencies": {
+    "@types/node": "^22.0.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@typescript-eslint/eslint-plugin": "^7.15.0",
