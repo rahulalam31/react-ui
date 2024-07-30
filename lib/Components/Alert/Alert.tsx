@@ -1,5 +1,4 @@
-import React, { FC, ReactNode } from "react";
-import "./index.css";
+import  { FC, ReactNode } from "react";
 
 interface AlertProps {
   children: ReactNode;

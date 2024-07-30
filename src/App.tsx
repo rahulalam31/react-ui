@@ -1,17 +1,17 @@
+import { AEGovButton, Alert } from "react-ui";
 
-import {Button} from 'react-ui'
-
-function App() { 
-
+function App() {
   return (
     <>
       <div>
-        <Button>
-        test
-        </Button>
+        <AEGovButton style="outline" onClick={() => console.log("clicked")}>
+          Click Me
+        </AEGovButton>
+        <br />
+        <Alert type="danger">This is warning</Alert>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

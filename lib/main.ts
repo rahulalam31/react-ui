@@ -1,4 +1,4 @@
 import "./index.css";
 
-export { Button } from "./Components/Button/Button";
+export { AEGovButton } from "./Components/Button/AEGovButton";
 export { Alert } from "./Components/Alert/Alert";
