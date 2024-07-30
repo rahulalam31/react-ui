@@ -39,7 +39,6 @@ export const AEGovButton: FC<AEGovButtonProps> = ({
       "border-2 border-solid border-blue-500 bg-white text-blue-500 hover:text-white",
     soft: "bg-opacity-50",
     link: "underline text-blue-600 hover:text-blue-700",
-    undefined: "",
   }[buttonStyle];
 
   const sizeClass = {
