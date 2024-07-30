@@ -1,19 +1,27 @@
-import type { FC, ReactNode, MouseEventHandler } from "react";
-import "./button.css";
+import { FC, ReactNode, ButtonHTMLAttributes } from "react";
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	children: ReactNode;
-	onClick?: MouseEventHandler<HTMLButtonElement>;
-	type: ReactNode;
-	style: ReactNode;
-	variant: ReactNode;
-	size: ReactNode;
-	iconOnly: ReactNode;
-	disabled: ReactNode;
-	className: ReactNode;
-}
+	onClick?: () => void;
+	type?: "button" | "submit" | "reset";
+	buttonStyle?: "solid" | "outline" | "soft" | "link";
+	size?: "base" | "lg" | "sm" | "xs";
+	variant?: "primary" | "secondary";
+	iconOnly?: boolean;
+	disabled?: boolean;
+	className?: string;
+  }
 
-export const Button: FC<ButtonProps> = ({ children, onClick, type = 'button', style = 'solid', variant = 'primary', size = 'base', iconOnly = false, disabled = false, className = '', ...props }) => {
+export const Button: FC<ButtonProps> = ({
+	children, onClick,
+	type = 'button',
+	buttonStyle = 'solid',
+	variant = 'primary',
+	size = 'base',
+	iconOnly = false,
+	disabled = false,
+	className = '',
+	...props }) => {
 
 	const baseClass = 'aegov-btn';
 
@@ -27,7 +35,7 @@ export const Button: FC<ButtonProps> = ({ children, onClick, type = 'button', st
 		outline: 'btn-outline',
 		soft: 'btn-soft',
 		link: 'btn-link'
-	}[style];
+	}[buttonStyle];
 
 	const sizeClass = {
 		base: 'btn-base',
