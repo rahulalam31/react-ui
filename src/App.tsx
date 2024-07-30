@@ -4,7 +4,10 @@ function App() {
   return (
     <>
       <div>
-        <AEGovButton style="outline" onClick={() => console.log("clicked")}>
+        <AEGovButton
+          buttonStyle="outline"
+          onClick={() => console.log("clicked")}
+        >
           Click Me
         </AEGovButton>
         <br />

@@ -4,7 +4,7 @@ interface AEGovButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   onClick?: () => void;
   type?: "button" | "submit" | "reset";
-  style?: "solid" | "outline" | "soft" | "link";
+  buttonStyle?: "solid" | "outline" | "soft" | "link";
   size?: "base" | "lg" | "sm" | "xs";
   variant?: "primary" | "secondary";
   iconOnly?: boolean;
@@ -16,7 +16,7 @@ export const AEGovButton: FC<AEGovButtonProps> = ({
   children,
   onClick,
   type = "button",
-  style = "solid",
+  buttonStyle = "solid",
   variant = "primary",
   size = "base",
   iconOnly = false,
@@ -39,7 +39,8 @@ export const AEGovButton: FC<AEGovButtonProps> = ({
       "border-2 border-solid border-blue-500 bg-white text-blue-500 hover:text-white",
     soft: "bg-opacity-50",
     link: "underline text-blue-600 hover:text-blue-700",
-  }[style];
+    undefined: "",
+  }[buttonStyle];
 
   const sizeClass = {
     base: "px-4 py-2 text-base",
@@ -62,21 +63,3 @@ export const AEGovButton: FC<AEGovButtonProps> = ({
     </button>
   );
 };
-
-// import { FC, ReactNode, MouseEventHandler } from "react";
-
-// interface ButtonProps {
-//   children: ReactNode;
-//   onClick?: MouseEventHandler<HTMLButtonElement>;
-// }
-
-// export const Button: FC<ButtonProps> = ({ children, onClick }) => {
-//   return (
-//     <button
-//       className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-//       onClick={onClick}
-//     >
-//       {children}
-//     </button>
-//   );
-// };
