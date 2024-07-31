@@ -1,5 +1,4 @@
 import { FC, ReactNode } from "react";
-// import "./alert.css";
 
 interface AlertProps {
   children: ReactNode;
