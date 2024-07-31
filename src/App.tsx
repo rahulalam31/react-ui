@@ -4,14 +4,23 @@ function App() {
   return (
     <>
       <div>
+        <AEGovButton buttonStyle="solid" onClick={() => console.log("clicked")}>
+          Click Me
+        </AEGovButton>
         <AEGovButton
           buttonStyle="outline"
           onClick={() => console.log("clicked")}
         >
           Click Me
         </AEGovButton>
+        <AEGovButton buttonStyle="soft" onClick={() => console.log("clicked")}>
+          Click Me
+        </AEGovButton>
+        <AEGovButton buttonStyle="link" onClick={() => console.log("clicked")}>
+          Click Me
+        </AEGovButton>
         <br />
-        <Alert type="danger">This is warning</Alert>
+        <Alert alertStyle="warning">This is warning</Alert>
       </div>
     </>
   );
