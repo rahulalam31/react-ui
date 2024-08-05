@@ -8,7 +8,7 @@
     "module": "ESNext",
     "skipLibCheck": true,
     "paths": {
-      "react-ui": ["./lib/main.ts"]
+      "react-ui-dls": ["./lib/main.ts"]
     },
 
     /* Bundler mode */
