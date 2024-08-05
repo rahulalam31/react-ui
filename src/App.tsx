@@ -1,5 +1,5 @@
 
-import {Button, Alert} from 'react-ui'
+import {Button, Alert} from 'react-ui-dls'
 import '../lib/output.css'
 
 function App() { 
