@@ -1,17 +1,16 @@
 {
-  "name": "react-ui",
-  "private": true,
-  "version": "0.0.1",
+  "name": "react-ui-dls",
+  "version": "0.0.2",
   "type": "module",
   "files": [
     "dist"
   ],
-  "main": "./dist/react-ui.umd.cjs",
-  "module": "./dist/react-ui.js",
+  "main": "./dist/react-ui-dls.umd.cjs",
+  "module": "./dist/react-ui-dls.js",
   "exports": {
     ".": {
-      "import": "./dist/react-ui.js",
-      "require": "./dist/react-ui.umd.cjs"
+      "import": "./dist/react-ui-dls.js",
+      "require": "./dist/react-ui.umd-dls.cjs"
     }
   },
   "scripts": {
