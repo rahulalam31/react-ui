@@ -10,8 +10,8 @@ export default defineConfig({
     //library entry
     lib: {
       entry: resolve(__dirname, 'lib/main.ts'),
-      name: 'react-ui',
-      fileName: 'react-ui'
+      name: 'react-ui-dls',
+      fileName: 'react-ui-dls'
     },
     //rollup
     rollupOptions: {
