@@ -2,15 +2,17 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tsconfigPaths from 'vite-tsconfig-paths'
+import dts from 'vite-plugin-dts'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), tsconfigPaths()],
+  plugins: [react(), tsconfigPaths(), dts({ rollupTypes: true })],
   build: {
     //library entry
     lib: {
       entry: resolve(__dirname, 'lib/main.ts'),
       name: 'react-ui-dls',
+      formats: ['es'],
       fileName: 'react-ui-dls'
     },
     //rollup
